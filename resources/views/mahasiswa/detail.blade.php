@@ -11,8 +11,12 @@
     </button>
 </div>
 <?php endif ?>
-
-
+<br>
+<div class="img">
+<?php if ($mahasiswa->foto):?>
+    <img src="{{asset('store/'.$mahasiswa->foto)}}" alt="">
+<?php endif ?>
+</div>
 <ul>
     <li>NIM : <?= $mahasiswa->nim ?></li>
     <li>Nama: <?= $mahasiswa->nama_mahasiswa ?></li>

@@ -26,6 +26,7 @@ class MahasiswaController extends Controller
         $mahasiswa->jenis_kelamin = $request->jenis_kelamin;
         $mahasiswa->alamat = $request->alamat;
         $mahasiswa->prodi_id = $request->prodi_id;
+        $mahasiswa->foto = $request->foto->store('foto','public');
         $mahasiswa->save();
 
         return redirect()->route('mahasiswa-detail',['id'=>$mahasiswa->id]);

@@ -36,3 +36,7 @@ Route::post('/mahasiswa/perbaharui/{id}','MahasiswaController@perbaharui')->name
 Route::delete('/mahasiswa/hapus/{id}','MahasiswaController@hapus')->name('mahasiswa.hapus');
 Route::post('/mahasiswa/simpan','MahasiswaController@simpanMahasiswa')->name('mahasiswa.simpan');
 Route::get('/mahasiswa/ubah/{id}','MahasiswaController@ubah')->name('mahasiswa.ubah');
+
+// gambar
+Route::get('/gambar/create','GambarController@create')->name('gambar.tambah');
+Route::post('/gambar/create','GambarController@store')->name('gambar.create');

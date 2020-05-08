@@ -3,7 +3,7 @@
 
 @section('content')
 <h1>Tambah Mahasiswa</h1>
-<form action="<?= route('mahasiswa.simpan') ?>" method="POST">
+<form action="<?= route('mahasiswa.simpan') ?>" method="POST" enctype="multipart/form-data">
     @csrf
     
     <div class="row">
@@ -48,7 +48,10 @@
                     <?php endforeach ?>
                 </select>
             </div>
-            
+            <div class="form-group">
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" class="form-control" id="foto">
+            </div>
         </div>
     </div>
 
